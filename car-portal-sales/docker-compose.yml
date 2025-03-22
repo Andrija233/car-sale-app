@@ -16,3 +16,18 @@ services:
       - 27017:27017
     volumes:
       - /data/db
+  rabbitmq:
+    container_name: rabbitmq
+    environment:
+      - RABBITMQ_DEFAULT_USER=USERNAME
+      - RABBITMQ_DEFAULT_PASS=PASSWORD
+    volumes:
+        - '/home/USER/rabbitmq/:/var/lib/rabbitmq'
+    ports:
+        - '5673:5672'
+        - '15673:15672'
+    image: 'rabbitmq:management'
+
+volumes:
+  rabbitmq_data:
+
