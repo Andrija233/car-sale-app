@@ -134,3 +134,11 @@ C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug
 C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Contracts.dll
 C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Contracts.pdb
 C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\MassTransit.EntityFrameworkCoreIntegration.dll
+C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Microsoft.AspNetCore.Authentication.JwtBearer.dll
+C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Microsoft.IdentityModel.Abstractions.dll
+C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Microsoft.IdentityModel.JsonWebTokens.dll
+C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Microsoft.IdentityModel.Logging.dll
+C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.dll
+C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Microsoft.IdentityModel.Protocols.OpenIdConnect.dll
+C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\Microsoft.IdentityModel.Tokens.dll
+C:\Users\User\Desktop\car-sale-app\car-portal-sales\src\AuctionService\bin\Debug\net9.0\System.IdentityModel.Tokens.Jwt.dll
