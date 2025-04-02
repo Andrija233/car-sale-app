@@ -21,6 +21,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService.UnitTests", 
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AuctionService.IntegrationTests", "tests\AuctionService.IntegrationTests\AuctionService.IntegrationTests.csproj", "{E2319525-58BB-4EE2-A14A-0BBA40E8F2EA}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SearchService.IntegrationTests", "tests\SearchService.IntegrationTests\SearchService.IntegrationTests.csproj", "{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -115,6 +117,18 @@ Global
 		{E2319525-58BB-4EE2-A14A-0BBA40E8F2EA}.Release|x64.Build.0 = Release|Any CPU
 		{E2319525-58BB-4EE2-A14A-0BBA40E8F2EA}.Release|x86.ActiveCfg = Release|Any CPU
 		{E2319525-58BB-4EE2-A14A-0BBA40E8F2EA}.Release|x86.Build.0 = Release|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Debug|x64.Build.0 = Debug|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Debug|x86.Build.0 = Debug|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Release|Any CPU.Build.0 = Release|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Release|x64.ActiveCfg = Release|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Release|x64.Build.0 = Release|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Release|x86.ActiveCfg = Release|Any CPU
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -127,5 +141,6 @@ Global
 		{450298D8-36EA-48DD-A75A-C4C28676DB4E} = {827E0CD3-B72D-47B6-A68D-7590B98EB39B}
 		{85F8AB2B-783B-41DD-A2A3-8715A76598C4} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 		{E2319525-58BB-4EE2-A14A-0BBA40E8F2EA} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
+		{58DBA5F5-E0A7-4FAF-BD44-D76FC7C9CB5E} = {0AB3BF05-4346-4AA6-1389-037BE0695223}
 	EndGlobalSection
 EndGlobal
