@@ -25,6 +25,9 @@ export default function Input(props: Props) {
             placeholder={props.label}
             color={fieldState.error ? 'failure' : !fieldState.isDirty ? '' : 'success'}
         />
+        {fieldState.error && (
+            <div className='text-sm text-red-500'>{fieldState.error.message}</div>
+        )}
     </div>
   )
 }
