@@ -4053,11 +4053,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\User\\Desktop\\car-sale-app\\car-portal-sales\\src\\AuctionService\\AuctionService.csproj",
+      "projectUniqueName": "G:\\Andrija\\MicroService .NET Project\\car-sale-app\\car-portal-sales\\src\\AuctionService\\AuctionService.csproj",
       "projectName": "AuctionService",
-      "projectPath": "C:\\Users\\User\\Desktop\\car-sale-app\\car-portal-sales\\src\\AuctionService\\AuctionService.csproj",
+      "projectPath": "G:\\Andrija\\MicroService .NET Project\\car-sale-app\\car-portal-sales\\src\\AuctionService\\AuctionService.csproj",
       "packagesPath": "C:\\Users\\User\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\User\\Desktop\\car-sale-app\\car-portal-sales\\src\\AuctionService\\obj\\",
+      "outputPath": "G:\\Andrija\\MicroService .NET Project\\car-sale-app\\car-portal-sales\\src\\AuctionService\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -4081,8 +4081,8 @@
         "net9.0": {
           "targetAlias": "net9.0",
           "projectReferences": {
-            "C:\\Users\\User\\Desktop\\car-sale-app\\car-portal-sales\\src\\Contracts\\Contracts.csproj": {
-              "projectPath": "C:\\Users\\User\\Desktop\\car-sale-app\\car-portal-sales\\src\\Contracts\\Contracts.csproj"
+            "G:\\Andrija\\MicroService .NET Project\\car-sale-app\\car-portal-sales\\src\\Contracts\\Contracts.csproj": {
+              "projectPath": "G:\\Andrija\\MicroService .NET Project\\car-sale-app\\car-portal-sales\\src\\Contracts\\Contracts.csproj"
             }
           }
         }

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "EeNkWcFBCdg=",
+  "dgSpecHash": "cDq99aeU4c8=",
   "success": true,
-  "projectFilePath": "C:\\Users\\User\\Desktop\\car-sale-app\\car-portal-sales\\src\\AuctionService\\AuctionService.csproj",
+  "projectFilePath": "G:\\Andrija\\MicroService .NET Project\\car-sale-app\\car-portal-sales\\src\\AuctionService\\AuctionService.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\User\\.nuget\\packages\\automapper\\13.0.1\\automapper.13.0.1.nupkg.sha512",
     "C:\\Users\\User\\.nuget\\packages\\google.protobuf\\3.27.0\\google.protobuf.3.27.0.nupkg.sha512",
