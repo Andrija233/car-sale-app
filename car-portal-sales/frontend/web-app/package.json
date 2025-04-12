@@ -10,6 +10,7 @@
     "postinstall": "flowbite-react patch"
   },
   "dependencies": {
+    "date-fns": "^4.1.0",
     "flowbite-react": "^0.11.7",
     "next": "15.2.4",
     "next-auth": "^5.0.0-beta.25",
