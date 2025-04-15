@@ -19,6 +19,11 @@ export default function BidForm({auctionId, highBid}: Props) {
 
     function onSubmit(data : FieldValues)
     {
+        if(data.amount <= highBid)
+        {
+            reset();
+            return toast.error('Your bid must be higher than' + ' $' + numberWithCommas(highBid));
+        }
         placeBidForAuction(auctionId, +data.amount).then(bid => {
             if(bid.error) throw bid.error;
             addBid(bid);

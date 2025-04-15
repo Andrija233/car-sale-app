@@ -2,20 +2,46 @@
 
 import { useAuctionStore } from '@/hooks/useActionStore'
 import { useBidStore } from '@/hooks/useBidStore'
-import { Bid } from '@/types'
+import { Auction, AuctionFinished, Bid } from '@/types'
 import { HubConnection, HubConnectionBuilder } from '@microsoft/signalr'
+import { User } from 'next-auth'
 import { useParams } from 'next/navigation'
 import React, { useCallback, useEffect, useRef } from 'react'
+import toast from 'react-hot-toast'
+import AuctionCreatedToast from '../components/AuctionCreatedToast'
+import { getDetailsViewData } from '../actions/AuctionActions'
+import AuctionFinishedToast from '../components/AuctionFinishedTOast'
 
 type Props = {
     children: React.ReactNode
+    user: User | null
 }
 
-export default function SignalRProvider({children}: Props) {
+export default function SignalRProvider({children, user}: Props) {
     const connection = useRef<HubConnection | null>(null);
     const setCurrentPrice = useAuctionStore(state => state.setCurrentPrice);
     const addBid = useBidStore(state => state.addBid);
     const params = useParams<{ id: string }>();
+
+    const handleAuctionFinished = useCallback((finishedAuction : AuctionFinished) => {
+        const auction = getDetailsViewData(finishedAuction.auctionId);
+        return toast.promise(auction, {
+            loading: 'Loading auction details',
+            success: (auction) => <AuctionFinishedToast finishedAuction={finishedAuction} auction={auction} />,
+            error: 'Error loading auction details'
+        }, {
+            success : {
+                duration : 10000,
+                icon : '🎉'
+            }
+        })
+    },[getDetailsViewData]);
+
+    const handleAuctionCreated = useCallback((auction : Auction) => {
+        if(user?.username !== auction.seller) return toast(<AuctionCreatedToast auction={auction} />, {
+            duration: 10000,
+        });
+    },[user?.username]);
 
     const handleBidPlaced = useCallback((bid: Bid) => {
         if (bid.bidStatus.includes('Accepted')) {
@@ -38,11 +64,15 @@ export default function SignalRProvider({children}: Props) {
         }
 
         connection.current.on('BidPlaced', handleBidPlaced);
+        connection.current.on('AuctionCreated', handleAuctionCreated);
+        connection.current.on('AuctionFinished', handleAuctionFinished);
 
         return() => {
             connection.current?.off('BidPlaced', handleBidPlaced);
+            connection.current?.off('AuctionCreated', handleAuctionCreated);
+            connection.current?.off('AuctionFinished', handleAuctionFinished);
         }
-    }, [setCurrentPrice, handleBidPlaced]);
+    }, [setCurrentPrice, handleBidPlaced, handleAuctionCreated, handleAuctionFinished]);
   return (
     children
   )
