@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import Heading from '@/app/components/Heading'
 import React from 'react'
 import AuctionForm from '../AuctionForm'

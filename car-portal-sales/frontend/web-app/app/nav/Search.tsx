@@ -12,6 +12,7 @@ export default function Search() {
     const setSearchValue = useParamsStore(state => state.setSearchValue);
     const searchValue = useParamsStore(state => state.searchValue);
 
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     function onChange(event: any)
     {
         setSearchValue(event.target.value);
@@ -30,6 +31,7 @@ export default function Search() {
         placeholder='Search for cars by make model or color'
         className='flex-grow pl-5 bg-transparent focus:outline-none border-transparent focus:border-transparent focus:ring-0 text-sm text-gray-600 '
         onChange={onChange}
+        // eslint-disable-next-line @typescript-eslint/no-explicit-any
         onKeyDown={(e: any) => e.key === 'Enter' && changeParams()}
       />
       <button onClick={changeParams}>

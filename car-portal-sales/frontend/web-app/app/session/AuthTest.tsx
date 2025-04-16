@@ -6,6 +6,7 @@ import { Button } from 'flowbite-react';
 
 export default function AuthTest() {
     const [loading, setLoading] = useState(false);
+    // eslint-disable-next-line @typescript-eslint/no-explicit-any
     const [result, setResult] = useState<any>();
 
     function doUpdate()
@@ -19,7 +20,7 @@ export default function AuthTest() {
     }
   return (
     <div className='flex items-center gap-4'>
-        <Button outline   onClick={doUpdate}>
+        <Button outline  onClick={doUpdate} disabled={loading}>
             Test auth
         </Button>
         <div>

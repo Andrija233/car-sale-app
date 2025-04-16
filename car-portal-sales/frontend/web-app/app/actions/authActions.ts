@@ -14,6 +14,7 @@ export async function getCurrentUser()
 
         return session.user;
     } catch (error) {
+        console.log(error);
         return null;
     }
 }

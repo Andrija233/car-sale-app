@@ -1,3 +1,5 @@
+export const dynamic = 'force-dynamic';
+
 import type { Metadata } from "next";
 import "./globals.css";
 import Navbar from "./nav/Navbar";
@@ -18,13 +20,14 @@ export  default async function RootLayout({
   children: React.ReactNode;
 }>) {
   const user = await getCurrentUser();
+  const notifyUrl = process.env.NOTIFY_URL;
   return (
     <html lang="en">
       <body>
         <ToasterProvider />
         <Navbar />
         <main className="container mx-auto px-3 pt-10">
-          <SignalRProvider user={user}>
+          <SignalRProvider user={user} notifyUrl={notifyUrl!}>
             {children}
           </SignalRProvider>
         </main>

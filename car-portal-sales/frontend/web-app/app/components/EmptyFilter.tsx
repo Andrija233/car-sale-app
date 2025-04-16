@@ -8,11 +8,11 @@ import { signIn } from 'next-auth/react'
 
 type Props = 
 {
-    title? : string
-    subtitle? : string
-    showReset? : boolean
-    showLogin? : boolean
-    callbackUrl? : string
+  title? : string
+  subtitle? : string
+  showReset? : boolean
+  showLogin? : boolean
+  callbackUrl? : string
 }
 
 export default function EmptyFilter({title = 'No matches for this filter', subtitle = 'Try changing or removing some of your filters', showReset, showLogin, callbackUrl}: Props) {
