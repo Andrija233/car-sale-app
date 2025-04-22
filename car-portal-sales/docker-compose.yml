@@ -73,8 +73,8 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - ASPNETCORE_URLS=http://+:80
-      - IssuerUri=http://id.car-portal.local
-      - ClientApp=http://app.car-portal.local
+      - IssuerUri=https://id.car-portal.local
+      - ClientApp=https://app.car-portal.local
       - ConnectionStrings__DefaultConnection=Server=postgres:5432;User Id=postgres;Password=postgrespw;Database=identity
       - VIRTUAL_HOST=id.car-portal.local
     depends_on:
@@ -87,7 +87,7 @@ services:
     environment:
       - ASPNETCORE_ENVIRONMENT=Docker
       - ASPNETCORE_URLS=http://+:80
-      - ClientApp=http://app.car-portal.local
+      - ClientApp=https://app.car-portal.local
       - VIRTUAL_HOST=api.car-portal.local
   bid-svc:
     image: andrija233/bid-svc:latest
@@ -128,12 +128,12 @@ services:
       - /var/lib/web/data
     environment:
       - AUTH_SECRET="BR7gcWgivZdGTRWBiSHSEncPSaK+miwnalTw2q/aTLs="
-      - AUTH_URL=http://app.car-portal.local
+      - AUTH_URL=https://app.car-portal.local
       - AUTH_URL_INTERNAL=http://web-app:3000
       - API_URL=http://gateway-svc/
-      - ID_URL=http://id.car-portal.local
+      - ID_URL=https://id.car-portal.local
       - ID_URL_INTERNAL=http://identity-svc
-      - NOTIFY_URL=http://api.car-portal.local/notifications
+      - NOTIFY_URL=https://api.car-portal.local/notifications
       - VIRTUAL_HOST=app.car-portal.local
       - VIRTUAL_PORT=3000
   nginx-proxy:
@@ -141,8 +141,10 @@ services:
     container_name: nginx-proxy
     ports:
       - 80:80
+      - 443:443
     volumes:
       - /var/run/docker.sock:/tmp/docker.sock:ro
+      - ./devcerts:/etc/nginx/certs
 
 volumes:
   rabbitmq_data:
