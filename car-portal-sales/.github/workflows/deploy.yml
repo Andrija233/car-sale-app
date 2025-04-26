@@ -16,7 +16,7 @@ jobs:
           - name: "andrija233/search-svc"
             path: "src/SearchService"
           - name: "andrija233/bid-svc"
-            path: "src/BidService"
+            path: "src/BiddingService"
           - name: "andrija233/identity-svc"
             path: "src/IdentityService"
           - name: "andrija233/gateway-svc"
