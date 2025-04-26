@@ -13,6 +13,18 @@ jobs:
         service:
           - name: "andrija233/auction-svc"
             path: "src/AuctionService"
+          - name: "andrija233/search-svc"
+            path: "src/SearchService"
+          - name: "andrija233/bid-svc"
+            path: "src/BidService"
+          - name: "andrija233/identity-svc"
+            path: "src/IdentityService"
+          - name: "andrija233/gateway-svc"
+            path: "src/GatewayService"
+          - name: "andrija233/notify-svc"
+            path: "src/NotificationService"
+          - name: "andrija233/web-app"
+            path: "frontend/web-app"
 
 
     steps:
