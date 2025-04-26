@@ -12,19 +12,19 @@ jobs:
       matrix:
         service:
           - name: "andrija233/auction-svc"
-            path: "src/AuctionService"
+            path: "car-portal-sales/src/AuctionService"
           - name: "andrija233/search-svc"
-            path: "src/SearchService"
+            path: "car-portal-sales/src/SearchService"
           - name: "andrija233/bid-svc"
-            path: "src/BiddingService"
+            path: "car-portal-sales/src/BiddingService"
           - name: "andrija233/identity-svc"
-            path: "src/IdentityService"
+            path: "car-portal-sales/src/IdentityService"
           - name: "andrija233/gateway-svc"
-            path: "src/GatewayService"
+            path: "car-portal-sales/src/GatewayService"
           - name: "andrija233/notify-svc"
-            path: "src/NotificationService"
+            path: "car-portal-sales/src/NotificationService"
           - name: "andrija233/web-app"
-            path: "frontend/web-app"
+            path: "car-portal-sales/frontend/web-app"
 
 
     steps:
@@ -43,7 +43,7 @@ jobs:
     - name: Build and push docker image
       uses: docker/build-push-action@v6
       with:
-        context: ${{ matrix.service.path }}
+        context: .
         file: ${{ matrix.service.path }}/Dockerfile
         push: true
         tags: ${{ matrix.service.name }}:latest
