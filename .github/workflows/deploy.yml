@@ -12,19 +12,19 @@ jobs:
       matrix:
         service:
           - name: "andrija233/auction-svc"
-            path: "car-portal-sales/src/AuctionService"
+            path: "src/AuctionService"
           - name: "andrija233/search-svc"
-            path: "car-portal-sales/src/SearchService"
+            path: "src/SearchService"
           - name: "andrija233/bid-svc"
-            path: "car-portal-sales/src/BiddingService"
+            path: "src/BiddingService"
           - name: "andrija233/identity-svc"
-            path: "car-portal-sales/src/IdentityService"
+            path: "src/IdentityService"
           - name: "andrija233/gateway-svc"
-            path: "car-portal-sales/src/GatewayService"
+            path: "src/GatewayService"
           - name: "andrija233/notify-svc"
-            path: "car-portal-sales/src/NotificationService"
+            path: "src/NotificationService"
           - name: "andrija233/web-app"
-            path: "car-portal-sales/frontend/web-app"
+            path: "frontend/web-app"
 
 
     steps:
