@@ -1,0 +1,45 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: ingress-svc
+  labels:
+    name: ingress-svc
+spec:
+  ingressClassName: nginx
+  tls:
+  - hosts:
+    - app.car-portal.local
+    - api.car-portal.local
+    - id.car-portal.local
+    secretName: car-portal-app-tls
+  rules:
+  - host: app.car-portal.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: webapp-clusterip
+            port: 
+              number: 3000
+  - host: api.car-portal.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: gateway-clusterip
+            port: 
+              number: 80
+  - host: id.car-portal.local
+    http:
+      paths:
+      - pathType: Prefix
+        path: "/"
+        backend:
+          service:
+            name: identity-clusterip
+            port: 
+              number: 80

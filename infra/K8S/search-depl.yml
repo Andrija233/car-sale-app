@@ -13,8 +13,7 @@ spec:
     spec:
       containers:
       - name: search-svc
-        image: andrija233/search-svc
-        imagePullPolicy: Never
+        image: andrija233/search-svc:latest
         env:
           - name : ConnectionStrings__MongoDbConnection
             valueFrom : 
